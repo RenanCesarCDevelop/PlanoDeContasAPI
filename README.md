@@ -95,6 +95,13 @@ A API estará disponível em: `http://localhost:5000/swagger`
 - **Body:**
 ```json
 {
+  "codigo": "1",
+  "descricao": "Receitas",
+  "aceitaLancamentos": false,
+  "paiId": null,
+  "tipo": 0
+}
+{
   "codigo": "1.1",
   "descricao": "Taxa Condominial",
   "aceitaLancamentos": true,
@@ -117,11 +124,10 @@ A API estará disponível em: `http://localhost:5000/swagger`
 - **Body:**
 ```json
 {
-  "id": 3,
-  "codigo": "1.1.1",
-  "descricao": "Dinheiro no caixa",
+  "codigo": "1.1",
+  "descricao": "Tx Condominial",
   "aceitaLancamentos": true,
-  "paiId": 2,
+  "paiId": 1,
   "tipo": 0
 }
 ```
