@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanoDeContas.API", "PlanoDeContas.API\PlanoDeContas.API.csproj", "{9B626531-002F-4B42-8B3C-E4A919DCF40B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanoDeContas.Application", "PlanoDeContas.Application\PlanoDeContas.Application.csproj", "{8D851973-026B-42B4-A37E-196504ECDA66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanoDeContas.Domain", "PlanoDeContas.Domain\PlanoDeContas.Domain.csproj", "{9BE707FC-B3B9-443B-A197-3A067DD4BF7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanoDeContas.Infrastructure", "PlanoDeContas.Infrastructure\PlanoDeContas.Infrastructure.csproj", "{11D3B014-49D7-444F-9B5E-1BA5FD45E6CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanoDeContas.Tests", "PlanoDeContas.Tests\PlanoDeContas.Tests.csproj", "{E7EA85C1-DC01-46EF-9F72-3E30379DB011}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B626531-002F-4B42-8B3C-E4A919DCF40B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B626531-002F-4B42-8B3C-E4A919DCF40B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B626531-002F-4B42-8B3C-E4A919DCF40B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B626531-002F-4B42-8B3C-E4A919DCF40B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D851973-026B-42B4-A37E-196504ECDA66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D851973-026B-42B4-A37E-196504ECDA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D851973-026B-42B4-A37E-196504ECDA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D851973-026B-42B4-A37E-196504ECDA66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BE707FC-B3B9-443B-A197-3A067DD4BF7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BE707FC-B3B9-443B-A197-3A067DD4BF7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BE707FC-B3B9-443B-A197-3A067DD4BF7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BE707FC-B3B9-443B-A197-3A067DD4BF7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11D3B014-49D7-444F-9B5E-1BA5FD45E6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D3B014-49D7-444F-9B5E-1BA5FD45E6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D3B014-49D7-444F-9B5E-1BA5FD45E6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D3B014-49D7-444F-9B5E-1BA5FD45E6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7EA85C1-DC01-46EF-9F72-3E30379DB011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7EA85C1-DC01-46EF-9F72-3E30379DB011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7EA85C1-DC01-46EF-9F72-3E30379DB011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7EA85C1-DC01-46EF-9F72-3E30379DB011}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
