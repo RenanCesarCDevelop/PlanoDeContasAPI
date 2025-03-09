@@ -8,7 +8,8 @@ Esta API foi desenvolvida utilizando as seguintes tecnologias:
 - **Banco de Dados**: SQL Server
 - **ORM**: Entity Framework Core
 - **Containerização**: Docker
-- **Ferramenta de Teste**: Swagger
+- **Framework de Testes**: NUnit
+- **Mocking para Testes**: Moq
 
 ---
 
@@ -135,12 +136,41 @@ A API estará disponível em: `http://localhost:5000/swagger`
 
 ---
 
+## ✅ Executando os Testes Unitários
+O projeto contém testes unitários implementados com **NUnit** e **Moq**.
+
+### 🔹 1. Restaurar Dependências dos Testes
+```bash
+cd PlanoDeContas.Tests
+dotnet restore
+```
+
+### 🔹 2. Executar os Testes
+```bash
+dotnet test
+```
+
+### 🔹 3. Tecnologias Utilizadas nos Testes
+- **NUnit**: Framework de testes unitários.
+- **Moq**: Biblioteca para criação de mocks.
+- **NUnit3TestAdapter**: Permite rodar os testes com `dotnet test`.
+
+📌 **Se precisar instalar os pacotes manualmente:**
+```bash
+dotnet add package NUnit
+dotnet add package NUnit3TestAdapter
+dotnet add package Moq
+```
+
+---
+
 ## 🛠️ Principais Funcionalidades da API
 
 ✅ Cadastro de contas contábeis (`Receita` e `Despesa`)
 ✅ Sugestão automática do próximo código
 ✅ Regras de validação de hierarquia de contas
 ✅ Testes via Swagger e Postman
+✅ Testes Unitários com NUnit e Moq
 
 ---
 
@@ -151,4 +181,3 @@ Caso encontre algum problema ao rodar a API, verifique:
 - Se há **erros de conexão** no `appsettings.json`
 
 Se precisar de mais suporte, entre em contato! 🚀
-

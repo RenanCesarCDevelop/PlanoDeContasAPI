@@ -5,11 +5,9 @@ using PlanoDeContas.Infrastructure.Data;
 
 namespace PlanoDeContas.Infrastructure.Repositories
 {
-    public class PlanoDeContaRepository : IPlanoDeContaRepository
+    public class PlanoDeContaRepository(AppDbContext context) : IPlanoDeContaRepository
     {
-        private readonly AppDbContext _context;
-
-        public PlanoDeContaRepository(AppDbContext context) => _context = context;
+        private readonly AppDbContext _context = context;
 
         public async Task<PlanoDeConta?> ObterPorIdAsync(int id)
         {
@@ -53,7 +51,7 @@ namespace PlanoDeContas.Infrastructure.Repositories
                 .OrderByDescending(p => p.Codigo)
                 .ToListAsync();
 
-            if (!filhos.Any())
+            if (filhos.Count == 0)
                 return "1"; // Primeiro código filho
 
             var ultimoCodigo = filhos.First().Codigo;

@@ -28,9 +28,7 @@ namespace PlanoDeContas.Application.Services
             // Regra: Se aceitar lançamentos, não pode ter filhos
             if (conta.AceitaLancamentos && conta.PaiId.HasValue)
             {
-                var pai = await _repository.ObterPorIdAsync(conta.PaiId.Value);
-                if (pai == null)
-                    throw new Exception("O PaiId informado não existe no banco de dados.");
+                var pai = await _repository.ObterPorIdAsync(conta.PaiId.Value) ?? throw new Exception("O PaiId informado não existe no banco de dados.");
                 if (pai.AceitaLancamentos == true)
                     throw new Exception("Conta que aceita lançamentos não pode ter filhos.");
             }
@@ -38,9 +36,7 @@ namespace PlanoDeContas.Application.Services
             // Regra: As contas devem ser do mesmo tipo do pai
             if (conta.PaiId.HasValue)
             {
-                var pai = await _repository.ObterPorIdAsync(conta.PaiId.Value);
-                if (pai == null)
-                    throw new Exception("O PaiId informado não existe no banco de dados.");
+                var pai = await _repository.ObterPorIdAsync(conta.PaiId.Value) ?? throw new Exception("O PaiId informado não existe no banco de dados.");
                 if (pai.Tipo != conta.Tipo)
                     throw new Exception($"A conta deve ser do mesmo tipo do seu pai. O tipo esperado é {pai.Tipo}.");
             }
@@ -56,10 +52,7 @@ namespace PlanoDeContas.Application.Services
 
         public async Task RemoverAsync(int id)
         {
-            var conta = await _repository.ObterPorIdAsync(id);
-            if (conta == null)
-                throw new Exception("Conta não encontrada.");
-
+            var conta = await _repository.ObterPorIdAsync(id) ?? throw new Exception("Conta não encontrada.");
             await _repository.RemoverAsync(conta);
         }
 
